@@ -46,7 +46,7 @@ const HeroSection = () => {
     <section className="hero">
       <div className="overlay">
         <div className="text-container">
-          <h1 className="header">Discover Underground Artists with Dig</h1>
+          <h1 className="header">Discover Underground Artists with Digg</h1>
           <h2 className="subheader">Join the waitlist and be the first to explore unknown talents.</h2>
           <p className="tagline">Find them before they are famous.</p>
           <form className="form" onSubmit={handleSubmit}>
