@@ -1,89 +1,116 @@
 /* src/components/HeroSection.css */
 .hero {
-    background-image: url('/public/background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 800px;
-  }
-  
-  .text-container {
-    margin-bottom: 20px;
+  background-image: url('/public/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+}
+
+.text-container {
+  margin-bottom: 20px;
+}
+
+.header {
+  font-size: 2.5rem; /* Adjusted by media query below */
+  margin: 0 0 10px;
+}
+
+.subheader {
+  font-size: 1.5rem; /* Adjusted by media query below */
+  margin: 0 0 10px;
+}
+
+.tagline {
+  font-size: 1.2rem; /* Adjusted by media query below */
+  margin: 0 0 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px; /* Adjusted by media query below */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.features {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex: 1;
+  margin: 10px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+  .hero {
+      padding: 20px 10px; /* Smaller padding */
+      height: auto; /* Avoid fixed height */
   }
   
   .header {
-    font-size: 2.5rem;
-    margin: 0 0 10px;
+      font-size: 2rem; /* Smaller font size */
   }
   
   .subheader {
-    font-size: 1.5rem;
-    margin: 0 0 10px;
+      font-size: 1.2rem; /* Smaller font size */
   }
   
   .tagline {
-    font-size: 1.2rem;
-    margin: 0 0 20px;
+      font-size: 1rem; /* Smaller font size */
   }
   
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .overlay {
+      width: 90%; /* Increase width percentage */
   }
   
   .input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 300px;
+      width: 100%; /* Full width inputs */
   }
-  
-  .button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 10px 0;
-  }
-  
-  .features {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .feature-list {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .feature-item {
-    flex: 1;
-    margin: 10px;
-    max-width: 200px;
-    text-align: center;
-  }
-  
-  .icon {
-    font-size: 2rem;
-    margin: 10px 0;
-  }
-  
+}

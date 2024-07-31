@@ -1,0 +1,59 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+  }
+  
+  .menuButton {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 15px; /* Reduce padding on mobile */
+    }
+  
+    .logo {
+      font-size: 1.2rem; /* Smaller logo font on mobile */
+    }
+  
+    .links {
+      display: none; /* Hide links on mobile */
+      flex-direction: column; /* Stack links vertically on mobile */
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menuButton {
+      display: block; /* Show menu button on mobile */
+    }
+  
+    .links.mobile {
+      display: flex; /* Show links when menu is open */
+    }
+  }
+  

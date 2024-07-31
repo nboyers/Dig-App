@@ -1,0 +1,23 @@
+/* src/components/Faq.css */
+.container {
+    padding: 50px 20px;
+  }
+  
+  .faq {
+    margin-bottom: 30px;
+  }
+  
+  .support {
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 10px; /* Adjust padding for mobile */
+    }
+  
+    .faq, .support {
+      margin-bottom: 20px; /* Adjust margin for mobile */
+    }
+  }
+  

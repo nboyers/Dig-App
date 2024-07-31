@@ -1,0 +1,53 @@
+/* src/components/Contact.css */
+.container {
+    padding: 50px 20px;
+  }
+  
+  .formSection {
+    margin-bottom: 30px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    height: 100px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .socialMedia {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 10px; /* Adjust padding for mobile */
+    }
+  
+    .formSection {
+      margin-bottom: 20px; /* Adjust margin for mobile */
+    }
+  
+    .socialMedia {
+      flex-direction: column; /* Stack items vertically on mobile */
+      gap: 10px; /* Add gap between items on mobile */
+    }
+  }
+  

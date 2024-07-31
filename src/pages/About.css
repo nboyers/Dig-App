@@ -1,0 +1,30 @@
+/* src/components/About.css */
+.container {
+    padding: 50px 20px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .socialMedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 10px; /* Adjust padding for mobile */
+    }
+    
+    .section {
+      margin-bottom: 20px; /* Adjust margin for mobile */
+    }
+    
+    .socialMedia {
+      flex-direction: column; /* Stack items vertically on mobile */
+      gap: 10px; /* Add gap between items on mobile */
+    }
+  }
+  

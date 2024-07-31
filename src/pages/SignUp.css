@@ -1,0 +1,30 @@
+/* src/components/SignUp.css */
+.container {
+    padding: 50px 20px;
+  }
+  
+  .formSection {
+    margin-bottom: 30px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .privacyPolicy {
+    margin-bottom: 30px;
+  }
+  
