@@ -9,18 +9,21 @@ import SignUp from './pages/SignUp';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import './App.css'; // Ensure this path is correct
 
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="app">
         <Navbar />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Dig-App" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/features" element={<HeroSection />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

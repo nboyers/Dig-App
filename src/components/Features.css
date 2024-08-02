@@ -1,34 +1,35 @@
-/* src/components/Features.css */
-.features {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .featureList {
-    display: flex;
+/* Ensure the page takes full height */
+html, body, #root, .app {
+  height: 100%;
+  margin: 0;
+}
+
+/* Container for the entire features page */
+.features-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Individual feature items */
+.feature-item {
+  width: 90%;
+  margin: 10px 0;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 600px) {
+  .features-page-container {
+    flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
   }
-  
-  .featureItem {
-    flex: 1;
-    margin: 0 10px;
-    max-width: 300px;
+
+  .feature-item {
+    width: 30%;
+    margin: 1rem;
   }
-  
-  .icon {
-    font-size: 2rem;
-    margin: 10px 0;
-  }
-  
-  @media (max-width: 768px) {
-    .features {
-      padding: 20px 10px; /* smaller padding for mobile */
-    }
-    
-    .featureItem {
-      max-width: 100%; /* full width for mobile devices */
-      margin-bottom: 20px; /* Add margin to separate items on mobile */
-    }
-  }
-  
+}

@@ -1,46 +1,48 @@
-/* src/components/HeroSection.css */
+/* Ensure the hero section takes full height but allows scrolling */
+html, body, #root, .app, .hero {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .hero {
   background-image: url('/public/background.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
+  overflow-y: auto;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  width: 100%;
   max-width: 800px;
 }
 
 .text-container {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .header {
-  font-size: 2.5rem; /* Adjusted by media query below */
+  font-size: 2.5rem;
   margin: 0 0 10px;
 }
 
 .subheader {
-  font-size: 1.5rem; /* Adjusted by media query below */
+  font-size: 1.5rem;
   margin: 0 0 10px;
 }
 
 .tagline {
-  font-size: 1.2rem; /* Adjusted by media query below */
+  font-size: 1.2rem;
   margin: 0 0 20px;
 }
 
@@ -53,7 +55,8 @@
 .input {
   padding: 10px;
   margin: 10px 0;
-  width: 300px; /* Adjusted by media query below */
+  width: 100%;
+  max-width: 300px;
 }
 
 .button {
@@ -67,6 +70,8 @@
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .feature-list {

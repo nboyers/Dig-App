@@ -23,16 +23,13 @@ const HeroSection = () => {
       return;
     }
     try {
-      console.log('Adding document to Firestore with email:', email);
       await addDoc(collection(db, 'subscribers'), {
         email: email,
         timestamp: serverTimestamp()
       });
-      console.log('Document successfully written!');
       setModalMessage('Thank you for subscribing!');
       setEmail('');
     } catch (error) {
-      console.error('Error adding document: ', error);
       setModalMessage('Failed to subscribe. Please try again.');
     }
     setIsModalOpen(true);

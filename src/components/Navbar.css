@@ -34,26 +34,26 @@
   
   @media (max-width: 768px) {
     .navbar {
-      padding: 10px 15px; /* Reduce padding on mobile */
+      flex-direction: row;
+      justify-content: space-between; /* Ensure proper spacing */
     }
   
-    .logo {
-      font-size: 1.2rem; /* Smaller logo font on mobile */
-    }
-  
-    .links {
-      display: none; /* Hide links on mobile */
-      flex-direction: column; /* Stack links vertically on mobile */
+    .navbar .menu {
+      display: none;
+      flex-direction: column;
       width: 100%;
       text-align: center;
+      position: absolute;
+      top: 60px; /* Adjust based on the navbar height */
+      left: 0;
+      background: #333;
     }
   
-    .menuButton {
-      display: block; /* Show menu button on mobile */
+    .navbar .menu.open {
+      display: flex;
     }
   
-    .links.mobile {
-      display: flex; /* Show links when menu is open */
+    .navbar-toggle {
+      display: flex;
     }
   }
-  
