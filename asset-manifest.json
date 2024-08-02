@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Dig-App/static/css/main.cd2ac60b.css",
-    "main.js": "/Dig-App/static/js/main.6a66d594.js",
+    "main.css": "/Dig-App/static/css/main.660ff655.css",
+    "main.js": "/Dig-App/static/js/main.d6f5a162.js",
     "static/js/453.f4be3ae2.chunk.js": "/Dig-App/static/js/453.f4be3ae2.chunk.js",
     "static/media/background.jpg": "/Dig-App/static/media/background.17ef3684bc20b1b76f27.jpg",
     "index.html": "/Dig-App/index.html",
-    "main.cd2ac60b.css.map": "/Dig-App/static/css/main.cd2ac60b.css.map",
-    "main.6a66d594.js.map": "/Dig-App/static/js/main.6a66d594.js.map",
+    "main.660ff655.css.map": "/Dig-App/static/css/main.660ff655.css.map",
+    "main.d6f5a162.js.map": "/Dig-App/static/js/main.d6f5a162.js.map",
     "453.f4be3ae2.chunk.js.map": "/Dig-App/static/js/453.f4be3ae2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd2ac60b.css",
-    "static/js/main.6a66d594.js"
+    "static/css/main.660ff655.css",
+    "static/js/main.d6f5a162.js"
   ]
 }
