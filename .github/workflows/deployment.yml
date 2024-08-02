@@ -15,10 +15,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21'  # Specify the Node.js version you want to use
+          node-version: '21'  # Adjust this to the Node version that matches your local development environment
 
       - name: Install Dependencies
         run: npm install
+
+      - name: List installed Firebase modules
+        run: ls node_modules/firebase
 
       - name: Build
         run: npm run build
