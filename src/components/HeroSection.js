@@ -1,36 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { FaMusic, FaStar, FaUser } from 'react-icons/fa';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
 import Modal from './Modal/Modal';
 import './HeroSection.css';
+import debounce from 'lodash.debounce';
+import { validateEmail, sanitizeInput } from './utils/utils';
 
 const HeroSection = () => {
   const [email, setEmail] = useState('');
   const [modalMessage, setModalMessage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [honeypot, setHoneypot] = useState(''); // Honeypot field
 
-  const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
+  const debouncedSetEmail = useCallback(
+    debounce((value) => setEmail(value), 300),
+    []
+  );
+
+  const handleChange = (event) => {
+    const sanitizedEmail = sanitizeInput(event.target.value);
+    debouncedSetEmail(sanitizedEmail);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (honeypot !== '') {
+      // If the honeypot field is filled, it's likely a bot
+      return;
+    }
     if (!validateEmail(email)) {
       setModalMessage('Please enter a valid email address.');
       setIsModalOpen(true);
       return;
     }
+
     try {
+      // Add new email to the database
       await addDoc(collection(db, 'subscribers'), {
         email: email,
-        timestamp: serverTimestamp()
+        timestamp: serverTimestamp(),
       });
       setModalMessage('Thank you for subscribing!');
       setEmail('');
     } catch (error) {
       setModalMessage('Failed to subscribe. Please try again.');
+      console.log('Error adding document:', error);
     }
     setIsModalOpen(true);
   };
@@ -47,15 +62,24 @@ const HeroSection = () => {
           <h2 className="subheader">Join the waitlist and be the first to explore unknown talents.</h2>
           <p className="tagline">Find them before they are famous.</p>
           <form className="form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="input"
-              required
-            />
-            <button type="submit" className="button">Join Waitlist</button>
+            <div className="input-container">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                onChange={handleChange}
+                className="input"
+                required
+              />
+              <input
+                type="text"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                style={{ display: 'none' }}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+              <button type="submit" className="button">Join Waitlist</button>
+            </div>
           </form>
         </div>
         <div className="features">
