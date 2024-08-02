@@ -12,11 +12,11 @@ import Navbar from './components/Navbar';
 
 const App = () => {
   return (
-    <Router basename="/Dig-App">
+    <Router>
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/Dig-App" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
