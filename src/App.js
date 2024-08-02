@@ -12,7 +12,7 @@ import Navbar from './components/Navbar';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Dig-App">
       <div>
         <Navbar />
         <Routes>

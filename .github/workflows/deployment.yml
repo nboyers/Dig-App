@@ -20,9 +20,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: List installed Firebase modules
-        run: ls node_modules/firebase
-
       - name: Build
         run: npm run build
 
