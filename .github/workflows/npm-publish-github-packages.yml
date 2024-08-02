@@ -13,7 +13,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '21'
-      - run: npm ci
+      - name: Use default npm registry
+        run: npm config set registry https://registry.npmjs.org/
+      - run: npm cache clean --force
+      - run: npm install
       - run: npm test
       - run: npm run build
 
