@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Dig-App/static/css/main.8fa49557.css",
-    "main.js": "/Dig-App/static/js/main.52bc362a.js",
+    "main.css": "/Dig-App/static/css/main.44788623.css",
+    "main.js": "/Dig-App/static/js/main.1cb37044.js",
     "static/js/453.f4be3ae2.chunk.js": "/Dig-App/static/js/453.f4be3ae2.chunk.js",
-    "static/media/background.jpg": "/Dig-App/static/media/background.17ef3684bc20b1b76f27.jpg",
+    "static/media/background.jpg": "/Dig-App/static/media/background.f4931b92f08dc7233385.jpg",
     "index.html": "/Dig-App/index.html",
-    "main.8fa49557.css.map": "/Dig-App/static/css/main.8fa49557.css.map",
-    "main.52bc362a.js.map": "/Dig-App/static/js/main.52bc362a.js.map",
+    "main.44788623.css.map": "/Dig-App/static/css/main.44788623.css.map",
+    "main.1cb37044.js.map": "/Dig-App/static/js/main.1cb37044.js.map",
     "453.f4be3ae2.chunk.js.map": "/Dig-App/static/js/453.f4be3ae2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fa49557.css",
-    "static/js/main.52bc362a.js"
+    "static/css/main.44788623.css",
+    "static/js/main.1cb37044.js"
   ]
 }
